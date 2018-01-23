@@ -106,6 +106,16 @@
 >   ╚══> FunctionContextVO
 >
 >            (VO === AO, <arguments> object and <formal parameters> are added)
+  
+
+
+我们来详细讨论。
+
+### 全局上下文中的变量对象
+
+首先，我们给一下全局对象的定义：
+
+> 全局对象就是
 
 
 
