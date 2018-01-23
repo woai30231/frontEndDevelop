@@ -72,8 +72,42 @@
 那么对应的VO就是：
 
 ```javascript
+  //全局上下文上的VO
+  VO(globalContext) = {
+    a: 10,
+    test: <reference to function>
+  };
   
+  //test函数上下文的VO
+  VO(test functionContext) = {
+    x: 30,
+    b: 20
+  };
 ```
+
+我们需要注意的是，在javascript内部实现层（规范中），变量对象是个抽象的概念，可能并不叫VO，并且最初的结构一步一定如此。
+
+### 不同执行上下文中的变量对象
+
+变量对象上的一些操作（比如：变量的初始化）和行为对于所有的执行上下文类型来说都已一样的。从这一点来说，将变量对象表示成抽象的概念更加合适。 函数上
+下文还能定义额外的与变量对象相关的信息。
+
+
+> AbstractVO (generic behavior of the variable instantiation process)
+> 
+>   ║
+>
+>   ╠══> GlobalContextVO
+>
+>   ║        (VO === this === global)
+>
+>   ║
+>
+>   ╚══> FunctionContextVO
+>
+>            (VO === AO, <arguments> object and <formal parameters> are added)
+
+
 
 
 
