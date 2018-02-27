@@ -8,6 +8,6 @@
 
 ### 相关资料链接
 
-* [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ [a complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-* [阮一峰flex布局教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+ [阮一峰flex布局教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
