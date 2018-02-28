@@ -56,6 +56,36 @@ css代码如下：
 
 ![flex-direction设置](https://css-tricks.com/wp-content/uploads/2013/04/flex-direction2.svg)
 
+* **flex-wrap**
+
+css代码如下：
+
+```css
+    .container{
+        display:flex;
+        flex-wrap: nowrap | wrap | wrap-reverse;
+    }
+```
+
+因为flex布局本身是弹性的，它可以根据屏幕大小来自动缩放从而来适应屏幕。所以默认情况下container下的item元素都会排列在一行上，屏幕越小，item元素也会变得很窄。有些情况下，这种情况并不是我们想要的。我们希望屏幕缩小时候，一行放不下内容，又不想缩放item来达到效果。那么我们就可以明确设置换行来告诉流浪器在下一行显示内容，如图所示：
+
+![flex-wrap设置](https://css-tricks.com/wp-content/uploads/2014/05/flex-wrap.svg)
+
+其中wrap-reverse设置item从下往上开始换行。
+
+* **flex-flow**
+
+css代码如下：
+
+```css
+    .container{
+        display:flex;
+        flex-flow:<‘flex-direction’> || <‘flex-wrap’>
+    }
+```
+
+不难理解，该属性是flex-direction和flex-wrap的简写形式，第一个值是flex-direction值，对应的，第二个值flex-wrap值。
+
 #### item上的属性
 
 ...
