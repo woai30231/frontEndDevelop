@@ -18,6 +18,14 @@
 
 ![flex布局架构图](https://cdn.css-tricks.com/wp-content/uploads/2011/08/flexbox.png)
 
+如图所示，相关概念可以简单解释如下：
+
+* **main axis**和**cross axis**分别控制控制着container里面item排列方向和对齐方式，打个比喻就好像小学语文练习本每个方格的横线和竖线一样，控制你写的内容如何排列，**main axis**就好比**横线**，而**cross axis**就好比**竖线**。
+* **main-start | main-end**和**cross-start | cross-end**就是两条轴的两端位置，分别对应开始和结束。
+* **main size**和**cross size**就是container容器的横向长度和竖向长度。
+
+注：这里需要注意一点，**main axis**并不总是横向的那条轴，**cross axis**也不总是竖向的那条轴，这取决于container容器设置了怎样的flex-direction。但是可以确定一点**cross axis**是**main axis**顺时针旋转90度的那条轴。
+
 下面将分别从container和item的角度来设置相关属性来说明这些属性是怎么使用的，以及他们的界面效果是怎么样的。
 
 #### container上的属性
