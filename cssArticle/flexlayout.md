@@ -141,9 +141,84 @@ css代码如下：
 
 ![align-items设置](https://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg)
 
+* **align-content**
+
+css代码如下：
+
+```css
+    .container{
+       .container {
+            align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+        } 
+    }    
+```
+
+该属性设置的**多行**item元素在**cross axis**轴上的对齐方式，分表含义跟justify-content差不多，不解释了，直接看图吧！
+
+![align-content](https://css-tricks.com/wp-content/uploads/2013/04/align-content.svg)
+
+
 #### item上的属性
 
-...
+* **order**
+
+css代码如下：
+
+```css
+    .item{
+        order: <integer>; /* default is 0 */
+    }
+```
+
+设置item元素的排列顺序，默认是按书写代码的顺序排列的！该值越小越靠前。 如图所示：
+
+![order设置](https://css-tricks.com/wp-content/uploads/2013/04/order-2.svg)
+
+* **flex-grow**
+
+css代码如下：
+
+```css
+    flex-grow: <number>; /* default 0 */
+```
+
+该属性设置item元素container的一行上屏幕拉伸时的宽度占比。你可以理解它定义了item元素怎么填充container的一行，很显然，数字越大，占的空间越大。来看图吧：
+
+![](https://css-tricks.com/wp-content/uploads/2014/05/flex-grow.svg)
+
+* **flex-shrink**
+
+css代码如下：
+
+```css
+    .item {
+        flex-shrink: <number>; /* default 1 */
+    }
+```
+注意：负数无效，该属性用于设置当屏幕宽度不足时候，item元素收缩的比率。
+
+* **flex-basis**
+
+css代码如下：
+
+```css
+    .item {
+        flex-basis: <length> | auto; /* default auto */
+    }
+```
+该属性用来设置item元素默认的宽度，如果设置为0，那么该item将不拉伸也不亚索，始终保持其原有的宽度。
+
+* **flex**
+
+css代码如下：
+
+```css
+    .item {
+        flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    }
+```
+该属性是前面三个属性的简写形式，推荐使用这种方式写前面三个属性，该属性默认值是0 1 auto。
+
 
 ### 相关资料链接
 
