@@ -30,7 +30,7 @@
 
 #### container上的属性
 
-##### display
+* **display**
 
 css代码如下：
 
@@ -40,6 +40,21 @@ css代码如下：
     }
 ```
 这个属性用于设置元素为使用flex布局，同时记住这个属性是其它属性的基础，这个没设置，其它的设置无效。
+
+* **flex-direction**
+
+css代码如下：
+
+```css
+    .container{
+        display:flex;
+        flex-direction:row | row-reverse | column | column-reverse;
+    }
+```
+
+此属性用于设置container的里面item在空间上怎么排列，其实就是设置**main axis**轴在横向上还是在竖向上！默认值row，row对应从左到右，row-reverse对应从右到左，column对应从上到下，column-reverse对应从下到上。看下图一目了然：
+
+![flex-direction设置](https://css-tricks.com/wp-content/uploads/2013/04/flex-direction2.svg)
 
 #### item上的属性
 
