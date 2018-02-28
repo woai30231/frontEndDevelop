@@ -86,6 +86,61 @@ css代码如下：
 
 不难理解，该属性是flex-direction和flex-wrap的简写形式，第一个值是flex-direction值，对应的，第二个值flex-wrap值。
 
+* **justify-content**
+
+css代码如下：
+
+```css
+    .container {
+        display:flex;
+        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+    }
+```
+
+该属性设置item元素在**main axis**轴向上怎样排列，分别如下：
+
+1、flex-start代表从开始点上一个一个的排下去，好比设置float布局设置属性为float为left；
+
+2、flex-end代表从结束点上一个一个的排，好比设置float布局设置属性为float为right；
+
+3、center，这个不能理解，居中排列；
+
+4、space-between代表除了头尾两个item元素的左边距和右边距分别不存在，中间的间距一样；
+
+5、space-around代表item的左右间距相等，但是头尾两个item因为分别没有前一个和后一个元素，所以视图上会少一半间距；
+
+6、space-around代表所有item元素左右两侧的间距相等。
+
+话不多说，来张图查看更能理解：
+
+![justify-content设置](https://cdn.css-tricks.com/wp-content/uploads/2013/04/justify-content-2.svg)
+
+* **align-items**
+
+css代码如下：
+
+```css
+    .container {
+        align-items: flex-start | flex-end | center | baseline | stretch;
+    }
+```
+
+该属性设置每一行(**注意是每一行内部**)上的item元素在**cross aixs**轴上的对齐方式，分别含义如下：
+
+1、flex-start代表顶对齐；
+
+2、flex-end代表底对齐；
+
+3、center代表居中对齐；
+
+4、baseline代表按baseline对齐；
+
+5、stretch代表他们高度一样。
+
+如下图形象所示：
+
+![align-items设置](https://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg)
+
 #### item上的属性
 
 ...
