@@ -20,7 +20,7 @@
 
 如图所示，相关概念可以简单解释如下：
 
-* **main axis**和**cross axis**分别控制控制着container里面item排列方向和对齐方式，打个比喻就好像小学语文练习本每个方格的横线和竖线一样，控制你写的内容如何排列，**main axis**就好比**横线**，而**cross axis**就好比**竖线**。
+* **main axis**和**cross axis**分别控制着container里面item排列方向和对齐方式，打个比喻就好像小学语文练习本每个方格的横线和竖线一样，控制你写的内容如何排列，**main axis**就好比**横线**，而**cross axis**就好比**竖线**。
 * **main-start | main-end**和**cross-start | cross-end**就是两条轴的两端位置，分别对应开始和结束。
 * **main size**和**cross size**就是container容器的横向长度和竖向长度。
 
@@ -30,7 +30,16 @@
 
 #### container上的属性
 
-...
+##### display
+
+css代码如下：
+
+```css
+    .container{
+        display:flex;/*or inline-flex*/
+    }
+```
+这个属性用于设置元素为使用flex布局，同时记住这个属性是其它属性的基础，这个没设置，其它的设置无效。
 
 #### item上的属性
 
