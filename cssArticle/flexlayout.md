@@ -206,7 +206,7 @@ css代码如下：
         flex-basis: <length> | auto; /* default auto */
     }
 ```
-该属性用来设置item元素默认的宽度，如果设置为0，那么该item将不拉伸也不亚索，始终保持其原有的宽度。
+该属性用来设置item元素原始的宽度，如果flex-grow和flex-shrink都设置为0，那么item的宽度值（或者说高度值，取决如果设置container的flex-direction属性）将始终保持这个宽度。
 
 * **flex**
 
