@@ -115,6 +115,8 @@ css代码如下：
 
 ![justify-content设置](https://cdn.css-tricks.com/wp-content/uploads/2013/04/justify-content-2.svg)
 
+ *注：flex-start值总是相对于容器的左上角而言的*
+
 * **align-items**
 
 css代码如下：
@@ -207,6 +209,8 @@ css代码如下：
     }
 ```
 该属性用来设置item元素原始的宽度，如果flex-grow和flex-shrink都设置为0，那么item的宽度值（或者说高度值，取决如果设置container的flex-direction属性）将始终保持这个宽度。
+
+  **这里有个特别注意的地方，就是当我们设置flex-direction的值为column的时候，那么此时设置的flex-basis属性值的值就是指的是items的高度值，切记！**
 
 * **flex**
 
