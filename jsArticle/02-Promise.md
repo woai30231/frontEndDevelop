@@ -27,4 +27,15 @@
 
 ### Promise状态转换
 
-我们知道，Promise最终都将给出承诺，那么给出怎样的承诺是跟我们实际业务逻辑联系在一起的，但这不是我们需要关心的，我们需要关心的就是Promise内部是怎么衔接给出“承诺”前后两个状态的。其实在Promise的工作过程中，Promise实例是通过状态机制来管理自身何时给出“承诺”的。主要有三个状态：pending、fulfilled及rejected，最开始是pending状态，有两种发展方向，1、pending-->fulfilled；2、pending-->rejected，只要
+我们知道，Promise最终都将给出承诺，那么给出怎样的承诺是跟我们实际业务逻辑联系在一起的，但这不是我们需要关心的，我们需要关心的就是Promise内部是怎么衔接给出“承诺”前后两个状态的。其实在Promise的工作过程中，Promise实例是通过状态机制来管理自身何时给出“承诺”的。主要有三个状态：pending、fulfilled及rejected，最开始是pending状态，有两种发展方向，1、pending-->fulfilled；2、pending-->rejected，不管Promise实例往何种方向发展，只要状态变为fulfilled或者rejected状态，那么就不会再发生状态变化，fulfilled和rejected之间是不会转换的。 我们看下下面的例子：
+
+```javascript
+  var promise = new Promise((resolve,reject)=>{
+    resolve('成功');
+    reject("失败");
+  });
+  promise.then(data=>{console.log(data)}).catch(e=>{console.log(e)});//只会输出“成功”
+```
+在上面的代码中，我们强制迫使Promise实例进行两种状态的变换，只要我们的状态一经变化到fulfilled或rejected的一种，就不会再发生状态变化，所以这里只会输出“成功”。
+
+**注：**调用resolve方法就是fulfilled，调用reject就是rejected！
