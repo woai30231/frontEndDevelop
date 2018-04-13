@@ -39,3 +39,7 @@
 在上面的代码中，我们强制迫使Promise实例进行两种状态的变换，只要我们的状态一经变化到fulfilled或rejected的一种，就不会再发生状态变化，所以这里只会输出“成功”。
 
 **注：** 调用resolve方法就是fulfilled，调用reject就是rejected！
+
+### 为什么需要Promise
+
+在没有Promise之前，我们在实际业务开发过程中，往往会有下面的需求
