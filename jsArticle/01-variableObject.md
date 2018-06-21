@@ -20,6 +20,33 @@
 
 * **函数调用栈**
 
+为了理解函数调用栈，我们先写一段代码：
+
+```javascript
+  function fn1(){
+    console.log('fn1');
+    fn2();
+  };
+  function fn2(){
+    console.log('fn2');
+  };
+  fn1();
+```
+我们在fn2函数调用的地方打上断点，然后刷新浏览器，查看Call Stack选项，会看到下面的结果：
+
+```bash
+  fn1
+  (anonymous)
+```
+此时再按一次f11键，此时Call Stack显示结果如下：
+
+```bash
+  fn2
+  fn1
+  (anonymous)
+```
+这里说明一下，anonymous指代全局匿名调用函数环境，而fn1和fn2分别指代fn1函数作用域和fn2作用域环境。
+
 * **函数作用域**
 
 * **闭包**
